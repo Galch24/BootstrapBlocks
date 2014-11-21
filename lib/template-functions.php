@@ -5,10 +5,20 @@ include('pagers.inc');
 include('forms.inc');
 include('messages.inc');
 include('tables.inc');
-include('fields.inc');
+//include('fields.inc');
 include('breadcrumbs.inc');
 include('containers.inc');
 include('lists.inc');
+
+// add-ons
+include('add-ons/blocks.inc');
+//include('add-ons/breadcrumbs.inc');
+//include('add-ons/contact.inc');
+include('add-ons/field.inc');
+include('add-ons/nodes.inc');
+//include('add-ons/pagers.inc');
+include('add-ons/template-functions-for-views.inc');
+include('add-ons/theme-functions.inc');
 
 /*
  * Return Footer Scripts
