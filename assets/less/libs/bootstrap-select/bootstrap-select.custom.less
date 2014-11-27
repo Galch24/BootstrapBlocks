@@ -1,0 +1,147 @@
+.bootstrap-select {
+
+  &.text-dashed {
+    border: none;
+    padding: 0;
+    &.btn-group .btn .filter-option {
+      width: auto;
+      border-bottom: 1px dashed;
+      display: inline-block;
+    }
+    .caret {
+      display: none;
+    }
+    .btn-select, .btn {
+      border-color: transparent;
+      .box-shadow(none);
+      background-color: transparent;
+    }
+    .dropdown-menu {
+      .box-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+      background-color: @body-bg;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: @border-radius-base;
+      > li {
+        > a {
+          color: @text-color;
+          &:hover, &:focus {
+            background-color: rgba(0,0,0,0.05);
+          }
+        }
+      }
+    }
+    .inner {
+      .text {
+        width: auto;
+        border-bottom: 1px dashed;
+        display: inline-block;
+      }
+    }
+  } // end of &.text-dashed
+
+  &.text-center {
+    .dropdown-menu {
+      text-align: center;
+    }
+  }
+
+  
+}
+
+.form-lg .box {
+  .bootstrap-select .btn {
+    display: inline-block;
+    font-size: 18px;
+    width: auto;
+  }
+}
+
+.form-lg .bootstrap-select .btn {
+  font-size: inherit;
+  margin-top: 0;
+  min-height: 0;
+  padding: 0;
+  height: auto;
+}
+
+button.selectpicker {
+  background-color: transparent;
+  border: 2px solid @input-border;
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  max-width: 100%;
+}
+
+.btn-select {
+  width: 220px;
+  .btn {
+    width: 220px;
+    font-size: @font-size-small;
+    line-height: normal;
+  }
+  .dropdown-menu {
+    background-color: @white;
+    border-radius: 0;
+    font-family: @font-default;
+    font-size: @font-size-small;
+    border: 1px solid @input-border;
+    > li {
+      > a {
+        color: @text-color;
+        display: block;
+        font-weight: normal;
+        line-height: normal;
+        padding: 3px 20px;
+        font-family: @font-default;
+        font-size: @font-size-small;
+        &:focus, &:hover {
+          background-color: @gray-lighter;
+          color: @text-color;
+        }
+      }
+    }
+  }
+}
+
+[class*="caret-"] {
+  
+  .caret {
+    position: absolute;
+    margin-top: 0 !important;
+    position: absolute;
+    top: 0 !important;
+    right: 0 !important;
+    background-color: @input-border;
+    width: 30px;
+    height: 100%;
+
+    &:before {
+      .icomoon();
+      font-size: 20px;
+      color: @white;
+      line-height: 26px;
+    }
+  }
+  .selectpicker {
+    padding-right: 30px;
+    position: relative;
+  }
+}
+
+.caret-check {
+  .caret {
+    &:before {
+      content: "\e80a";
+    }
+  }
+}
+
+.caret-list {
+  .caret {
+    &:before {
+      content: "\e6b7";
+    }
+  }
+}

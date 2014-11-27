@@ -1,0 +1,515 @@
+.box {
+   .form-group {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24%;
+  }
+  .box-weight {
+    width: 70%;
+  }
+  .sign {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0 2px;
+  }
+  .box-title {
+    .h2;
+    margin-bottom: 20px;
+    margin-top: 18px;;
+  }
+
+  .measure {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0 2px;
+    sup {
+      text-decoration: none;
+      font-size: 0.8em;
+    }
+    .btn {
+      font-size: 20px;
+    }
+  }
+  .measure-bulk {
+    width: 45%;
+    text-align: center;
+  }
+  .box-bulk {
+    width: 45%;
+    text-align: center;
+    .text-inp  {
+      font-size: 24px;
+      height: 61px;
+      line-height: 54px;
+    }
+  }
+  .box-tools {
+    float: right;
+    display: block;
+    margin-top: 33px;
+    width: 100%;
+    > button {
+      margin-top: 0;
+      float: right;      
+      padding: 8px;
+      width: 61px;
+      height: 61px;
+      text-align: center;
+      .icon-close {
+        font-size: 20px;
+      }
+    }
+  }  
+}
+
+.text-dashed {
+  border-bottom: 1px dashed;
+  display: inline;
+  line-height: 1.2em;
+  text-decoration: none;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+.mark-arrows {
+  bottom: 0;
+  color: @brand-primary;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  left: 50%;
+  line-height: 13px;
+  margin-bottom: 15px;
+  margin-left: -24px;
+  position: absolute;
+  text-decoration: none;
+  width: 40px;
+  z-index: 2;
+  
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+  .symb {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+  /*&:before {
+    .psevdo();
+    width: 58px;
+    height: 60px;
+    bottom: -5px;
+    left: -19px;
+    cursor: pointer;
+  }*/
+}
+
+.tool-del, .tool-plus {
+  font-size: 45px;
+  line-height: 1em;
+}
+
+.deliv-from {
+  position: relative;
+  padding-right: 25px;
+}
+.deliv-to {
+  position: relative;
+  padding-left: 25px;
+}
+
+.delivery-form {
+  margin-top: 30px;
+  margin-bottom: 3em;
+}
+
+.fieldset-from-to {
+  position: relative;
+  .h2 {
+    margin-top: 0;
+  }
+}
+
+.fieldset-delivery {
+  padding-bottom: 26px;
+}
+
+.fieldset-shippers {
+  padding-bottom: 25px;
+  .fieldset-legend {
+    margin-bottom: 34px;
+  }
+}
+
+.fieldset-legend {
+  margin-bottom: 25px;
+}
+
+.field-num {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: @white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.field-logo {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.field-status {
+  color: @brand-danger;
+  [class*="icon-"] {
+    font-size: 22px;
+    vertical-align: middle;
+  }
+}
+
+.field-title {
+  > a {
+    //.text-dashed;
+    color: @text-color;
+    &:hover, &:focus {
+      color: @text-color !important;
+    }
+  }
+}
+
+.field-detail {
+  text-align: left;
+}
+
+.delivery  {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.terminal-point {
+  font-size: 13px;
+  color: @text-color;
+  &:hover, &:focus {
+    color: @text-color !important;
+    outline: none;
+  }
+}
+
+.field-action {
+  .btn {
+    opacity: 0.5;
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+
+  .box {
+    .form-control {
+      padding: 10px 5px;
+    }
+    .measure {
+      font-size: 20px;
+    }
+    .measure-bulk {
+      width: 12%;
+      text-align: center;
+    }
+    .box-tools {
+      width: 100%;
+      > button {
+        float: right;
+        width: 51px;
+        height: 51px;
+        min-height: 51px;
+        line-height: normal;
+        padding: 0;
+        .icon-close {
+          font-size: 20px;
+        }
+      }
+    }  
+    .form-control {
+      height: 51px;
+    }
+  }
+  .mark-arrows {
+    right: -9%;
+  }
+
+  .delivery  {
+    padding-right: 0;
+  }
+
+  .date-transfer {
+    color: @brand-primary;
+  }
+  .field-num {
+    font-size: 13px;
+  }
+
+} // end of @media sm
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: (@screen-sm - 1)) {
+
+  .delivery {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .box {
+    margin-bottom: 2em;
+    position: relative;
+    .form-group {
+      width: 100%;
+    }
+    .form-control {
+      padding: 10px 5px;
+    }
+    .measure {
+      font-size: 20px;
+    }
+    .measure-bulk {
+      font-size: 22px;
+      margin: 0 0 0;
+      text-align: left;
+      vertical-align: middle;
+      line-height: normal;
+    }
+    .box-tools {
+      margin-left: 2%;      
+      width: auto;
+      margin-top: 24px;
+      > button {
+        float: right;
+        width: 51px;
+        height: 51px;
+        margin-top: 0;
+        padding: 0;
+        .icon-close {
+          font-size: 20px;
+        }
+      }
+    }
+    label.h2 {
+      font-size: 24px;
+      margin: 20px 0 5px;
+    }
+    .checkbox {
+      margin: 10px 0;
+      font-size: 15px;
+    }
+    .form-control {
+      border-width: 3px;
+      font-size: 24px;
+      height: 51px;
+      padding: 10px 5px;      
+    }
+    .box-title {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    label {
+      font-size: 15px;
+      line-height: normal;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+    .sign {
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  .deliv-from {
+    padding-right: 0;
+  }
+  .deliv-to {
+    padding-left: 0;
+  }
+  .mark-arrows {
+    display: none;
+  }
+
+  .delivery-form {
+    .box {
+      .form-group {
+        margin-bottom: 5px;
+      }
+      label {
+        vertical-align: top;
+        display: block;
+        color: #888;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.5em;
+      }
+      .form-control {
+        border-color: #e1e1e1;
+        border-width: 1px;
+        height: 40px;
+        line-height: normal;
+        padding: 5px;
+        margin-bottom: 0;
+      }
+      .text-inp {
+        font-size: 22px;
+        margin: 50px 0 49px;
+        height: 41px;
+        line-height: 1.5em;
+      }
+    }
+    .checkbox {
+      margin: 0;
+    }
+    
+    .box-size-label {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .bg-xs-muted {
+      background-color: @gray-body-bg;
+      padding: 10px 5px 0;
+      border-radius: 2px;
+      .bootstrap-select .btn,
+      .open .bootstrap-select .btn {
+        background-color: transparent;
+      }
+      .bootstrap-select.btn-group.open:not(.input-group-btn) > .dropdown-toggle.btn-default {
+        background-color: transparent;
+      }
+    }
+    
+    .box-width,
+    .box-length, 
+    .box-height {
+      width: 100%;
+      label {
+        display: inline-block;
+        vertical-align: middle;
+        width: 12%;
+        font-weight: normal;
+      }
+      .form-control {        
+        display: inline-block;        
+        width: 80%;
+      }
+    }
+    .box-weight {
+      width: 100%; 
+      label {
+        margin-bottom: 49px;
+      }
+      .form-control {
+        margin-bottom: 46px;
+      }
+    }
+    .sign {
+      display: none;
+    }
+    .measure {
+      display: block;
+      text-align: center;
+      margin-top: 0;
+      width: 100%;
+      font-size: 20px;
+      line-height: 1em;
+      padding-bottom: 5px;
+      color: @text-color;
+    }
+    .box-bulk {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .box-tools {
+      margin: 114px 0 0;
+      > button {
+        float: left;
+        font-size: 28px;
+        height: 41px;
+        min-height: 41px;
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+        width: 41px;
+      }
+      .btn-danger {
+        
+      }
+    }
+    .tool-del, .tool-plus {
+      font-size: 28px;
+      line-height: 1em;
+    }
+  }
+  .table-list .table-td {
+    .field-action,
+    .field-cost {
+      text-align: right;
+      padding-bottom: 10px;
+    }
+    .field-action {
+      padding-bottom: 10px;
+      > .btn {
+        margin-left: 20px;
+      }
+    }
+    
+    .field-cost {
+      padding-bottom: 0;
+      font-size: 22px;
+      color: @brand-danger;
+      //font-weight: bold;
+    }
+  }
+  .field-terminals {
+    border-top: 1px solid @table-border-color;
+    border-bottom: 1px solid @table-border-color;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+  }
+  .field-terminal {
+    //padding-left: 10%;
+    color: @text-muted;
+  }
+  .field-info {
+    //background-color: @gray-lighter;
+  }
+  .field-delivery-type {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .field-period {
+    font-size: 15px;
+  }
+
+  .field-title {
+    margin-bottom: 15px;
+  }
+
+  .field-date {
+    text-align: right;
+    background-color: @gray-lighter;
+  }
+  .field-logo {
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+} //end of xs-screen

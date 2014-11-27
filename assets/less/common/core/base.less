@@ -1,0 +1,202 @@
+body {
+
+}
+
+a {
+  text-decoration: underline;
+  color: @link-color;
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+  &:not(.btn) {
+    &:focus, &:hover {
+      color: @link-color;
+    }
+  } 
+}
+
+#logo {
+  background-image: url('@{images-path}/logo-md.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: inline-block;
+  height: 43px; //42px;
+  max-width: 100%;
+  margin: 15px 10px;
+  width: 164px;
+}
+
+#logo-svg {
+  display: inline-block;
+  height: 43px;
+  max-width: 100%;
+  width: 54px;
+  vertical-align: middle;
+  margin-right: 7px;
+  margin-bottom: 5px;
+}
+
+#logo-svg-sm {
+  display: inline-block;
+  height: 25px;
+  max-width: 100%;
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-bottom: 0; 
+}
+.logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  a {
+    .nodeco();
+  }
+  &.logo-sm {
+    font-size: 15px;
+  }
+}
+.logo-vec {
+  text-transform: uppercase;
+}
+.navbar-brand {
+  font-size: 24px;
+  height: 43px;
+  line-height: 43px;
+  padding: 0;
+  font-weight: bold;
+  vertical-align: middle;
+  .nodeco();
+}
+a {
+  text-decoration: underline;
+}
+.nav {
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body { }
+
+
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+#header { margin-top: 0; }
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.main {
+
+}
+
+/* ==========================================================================
+   Blocks
+   ========================================================================== */
+//All Blocks
+#sidebar .block { margin-top: 20px; }
+
+//Search Form Block
+#search-block-form input.form-text { width: 110px; }
+
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer { }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm) { }
+
+@media (min-width: @screen-md) { }
+
+@media (min-width: @screen-lg) { }
+
+.page-header {
+  border: none;
+  margin: 20px 0 0;
+  padding-bottom: 9px;
+}
+
+sup {
+  top: -0.9em;
+}
+
+.social {
+  max-width: 100%;
+  a {
+    color: @white;
+    width: 61px;
+    height: 61px;    
+    text-align: center;
+    display: block;
+    float: left;
+    text-decoration: none;
+    line-height: 61px;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @white;
+    }
+    [class*="icon-"] {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 30px;
+    }
+  }
+}
+.link-fb { background-color: #375a9c; }
+.link-googleplus { background-color: #db4a39; }
+.link-tw { background-color: #0e8ac8; }
+.link-vk { background-color: #567ca1; }
+.link-feed { background-color: #e9a01d; }
+.link-youtube { background-color: #e74a41; }
+
+.table-list {
+
+}
+.table-row {
+  display: table;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+[class*="cell-"] {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cell-pict {
+  text-align: center;
+  width: 21%;
+}
+.cell-descr {
+
+}
+
+.list-items {
+  .clearfix;
+  > .list-item {
+    margin-bottom: 1em;
+    img {
+      height: auto;
+      max-width: 100%;      
+    }
+  }
+}

@@ -10,16 +10,58 @@ module.exports = (grunt) ->
     less:
       all:
         files:
-          "assets/css/style.min.css": "assets/less/style.less"
+          "assets/css/style.min.css": "assets/system/less/style.less"
+
+    concat:
+      all:
+        files:
+         "assets/js/scripts.min.js": [
+              "assets/system/plugins/bootstrap/js/transition.js", 
+              "assets/system/plugins/bootstrap/js/alert.js", 
+              "assets/system/plugins/bootstrap/js/button.js", 
+              "assets/system/plugins/bootstrap/js/carousel.js", 
+              "assets/system/plugins/bootstrap/js/collapse.js", 
+              "assets/system/plugins/bootstrap/js/dropdown.js", 
+              "assets/system/plugins/bootstrap/js/modal.js", 
+              "assets/system/plugins/bootstrap/js/tooltip.js", 
+              "assets/system/plugins/bootstrap/js/popover.js", 
+              "assets/system/plugins/bootstrap/js/scrollspy.js", 
+              "assets/system/plugins/bootstrap/js/tab.js",
+              "assets/system/plugins/bootstrap-select/js/bootstrap-select.js",
+              "assets/system/plugins/bootstrap-select/js/bootstrap-select.custom.js",
+              "!assets/system/plugins/custom/custom.js",
+              "assets/system/plugins/*.js"]
 
     uglify:
       all:
         files:
-          "assets/js/scripts.min.js": ["assets/js/plugins/bootstrap/transition.js", "assets/js/plugins/bootstrap/alert.js", "assets/js/plugins/bootstrap/button.js", "assets/js/plugins/bootstrap/carousel.js", "assets/js/plugins/bootstrap/collapse.js", "assets/js/plugins/bootstrap/dropdown.js", "assets/js/plugins/bootstrap/modal.js", "assets/js/plugins/bootstrap/tooltip.js", "assets/js/plugins/bootstrap/popover.js", "assets/js/plugins/bootstrap/scrollspy.js", "assets/js/plugins/bootstrap/tab.js", "assets/js/plugins/bootstrap/typehead.js", "assets/js/plugins/*.js", "!assets/js/scripts.min.js", "assets/js/*.js"]
+          "assets/js/scripts.min.js": [
+              "assets/system/plugins/bootstrap/js/transition.js", 
+              "assets/system/plugins/bootstrap/js/alert.js", 
+              "assets/system/plugins/bootstrap/js/button.js", 
+              "assets/system/plugins/bootstrap/js/carousel.js", 
+              "assets/system/plugins/bootstrap/js/collapse.js", 
+              "assets/system/plugins/bootstrap/js/dropdown.js", 
+              "assets/system/plugins/bootstrap/js/modal.js", 
+              "assets/system/plugins/bootstrap/js/tooltip.js", 
+              "assets/system/plugins/bootstrap/js/popover.js", 
+              "assets/system/plugins/bootstrap/js/scrollspy.js", 
+              "assets/system/plugins/bootstrap/js/tab.js",
+              "assets/system/plugins/bootstrap-select/js/bootstrap-select.js",
+              "assets/system/plugins/bootstrap-select/js/bootstrap-select.custom.js",
+              "!assets/system/plugins/custom/custom.js",
+              "assets/system/plugins/*.js"]
 
     watch:
       less:
-        files: ["assets/less/*.less", "assets/less/bootstrap/*.less"]
+        files: ["assets/system/less/*.less", 
+              "assets/system/less/common/*.less",
+              "assets/system/less/common/core/*.less",
+              "assets/system/less/libs/*.less",
+              "assets/system/less/libs/bootstrap-select/*.less",
+              "assets/system/less/common/modules/*.less",
+              "assets/system/less/common/regions/*.less",
+              ]
         tasks: ["less"]
 
       js:
@@ -32,7 +74,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-jshint"
   grunt.loadNpmTasks "grunt-contrib-uglify"
+  grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-less"
-  grunt.registerTask "default", ["clean", "less", "uglify"]
+  grunt.registerTask "default", ["clean", "less", "concat"]
+  grunt.registerTask "build", ["clean", "less", "uglify"]
   grunt.registerTask "dev", ["watch"]

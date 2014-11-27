@@ -1,0 +1,1 @@
+ window.jQuery16 = jQuery.noConflict();

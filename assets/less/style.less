@@ -1,3 +1,30 @@
-@import "bootstrap/bootstrap.less";
-@import "drupal.less";
-@import "app.less";
+/* ==========================================================================
+   Include external libraries like Bootstrap
+   ========================================================================== */
+
+// Libraries
+// -------------------------
+@import "../system/plugins/bootstrap/less/bootstrap.less";  // only bootstrap we import from /system folder
+@import "libs/bs-variables.less";
+@import "libs/bootstrap-select/bootstrap-select.less";
+@import "libs/bootstrap-select/bootstrap-select.custom.less";
+@import "libs/remote-list.less";
+@import "libs/bootstrap-datetimepicker.less";
+
+// Icon Libraries
+// -------------------------
+@import "libs/icomoon.less";  // Uncomment for icons from icomoon.io
+//@import "font-awesome/font-awesome.less";  // Uncomment for icons from font awesome
+//@import "libs/whhg.less";  // Uncomment for icons from http://www.webhostinghub.com
+
+
+/* =============================================================================
+   Common styles for current theme
+   ========================================================================== */
+@import "common/application.less";
+
+
+/* =============================================================================
+   Custom styles for additional themes
+   ========================================================================== */
+//@import "theme/application.less";

@@ -1,0 +1,80 @@
+.footer {
+  padding-top: 20px;
+  .social {
+    margin: 21px 0 0;
+    width: 200px;    
+  }
+}
+@footer-height:       250px;
+
+.footer-links {
+  a {
+    opacity: 0.5;
+    &:hover, &:focus {
+      opacity: 1;      
+    }
+  }
+}
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com 
+*/
+
+* {margin:0;padding:0;}
+
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html, body {height: 100%;}
+
+#wrapper {min-height: 100%;}
+
+#wrapper {
+  overflow: auto;
+	padding-bottom: @footer-height;  /* must be same height as the footer */
+} 
+
+.footer {
+  position: relative;
+	margin-top: (0 - @footer-height); /* negative value of footer height */
+	height: @footer-height;
+	clear: both;
+}
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+  content:"";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;/* thank you Erik J - negate effect of float*/
+}
+
+
+
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: (@screen-sm - 1)) {
+
+
+  #wrapper {
+    padding-bottom: 535px;  /* must be same height as the footer */
+  } 
+
+  .footer {
+    margin-top: (0 - 535px); /* negative value of footer height */
+    height: 535px;
+    .social {
+      width: 200px;
+    }
+  }
+
+
+} //end of media

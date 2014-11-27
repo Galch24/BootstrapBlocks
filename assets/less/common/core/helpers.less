@@ -1,0 +1,103 @@
+// -------------------------------------
+//
+//   Helpers -
+//   Extends, Functions, and Mixins
+//
+// -------------------------------------
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+.shad { .box-shadow(0 2px 3px rgba(0, 0, 0, 0.3)); }
+
+.text-bold { font-weight: bold; }
+
+.bg-main { background-color: @body-bg; }
+.bg-primary { background-color: @brand-primary; }
+.bg-success { background-color: @brand-success; }
+
+.bg-primary, 
+.bg-success {
+  color: @white;
+  h1, h2, h3, h4, .page-header {
+    color: @white;
+  }
+  a {
+    color: @white;
+    &:hover, &:focus {
+      color: @white;
+    }
+  }
+}
+
+.text-lg {
+  font-size: @font-size-large;
+  line-height: normal;
+}
+.text-sm {
+  font-size: @font-size-small;
+  line-height: normal;
+}
+
+.bg-muted {
+  background-color: @gray-body-bg;
+  .block-head {
+    color: @brand-success;
+  }
+}
+.text-danger {
+  color: @brand-danger;
+}
+.unvis {
+  visibility: hidden;
+}
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+.psevdo() {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.ico-sprite() {
+  .psevdo;
+  background-image: url(../images/icons.png);
+  background-repeat: no-repeat;
+}
+
+.ico-text() {
+  font-family: 'WebHostingHub-Glyphs';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.btn-border-none() {
+  border: none;
+  &:hover, &:focus, &:active, &.active {
+    border: none;
+  }
+}
+
+.nodeco() {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}

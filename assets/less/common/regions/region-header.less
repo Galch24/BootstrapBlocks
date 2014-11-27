@@ -1,0 +1,75 @@
+#header {
+  padding: 14px 0 0;
+  #logo {
+    margin: 0;
+  }
+  .navbar-default {
+    z-index: 1100;
+  }
+  .search-form {
+    text-align: right;
+    .btn, .form-control {
+      height: 54px;
+      font-size: 24px;
+      background-color: #edeef0;
+    }
+  }
+}
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) { 
+
+  #header {
+    .navbar-right {
+      margin-right: 90px;
+    }
+  }
+
+} // end of @media (min-width: @screen-lg)
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) and (max-width: @screen-md-max)  { 
+
+  #header {
+    .navbar-right {
+      margin-right: 90px;
+    }
+  }
+
+} //end of media
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) { 
+
+
+
+} // end of @media sm
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: (@screen-sm - 1)) { 
+
+  #header {
+    padding-top: 0;
+    .navbar-default {
+      min-height: 40px;
+      //padding-right: 40px;
+    }
+    .navbar-nav {
+      margin: 0;
+    }
+    .navbar {
+      min-height: 0;
+    }
+    .search-form .btn, 
+    .search-form .form-control {
+      font-size: 15px;
+    }
+    .navbar-right {
+      float: right;
+    }
+  }
+
+
+} //end of media
